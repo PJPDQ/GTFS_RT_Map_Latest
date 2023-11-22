@@ -19,6 +19,7 @@ There are three main components of this webApp:
 pip install -r requirements.txt
 ```
 2. Your device is connected to the hetrogenmodel drive to download the appropriate static files.
+    a. alternatively, ensure that you have fetched all the necessary static files locally.
 
 ### Processes
 1. Run the python vehicles information fetcher to compute the daily appropriate static files. 
@@ -30,10 +31,10 @@ pip install -r requirements.txt
     python ./data/gtfs_vp_3Nov23.py
     ```
 2. Run the Flask Server (iff the static files are generated properly)
+    a. Open any Web Browser or Click on the address link shown in the Flask Server <ip-address:port-number>
 ```python
 python app.py
 ```
-    a. Open any Web Browser or Click on the address link shown in the Flask Server <ip-address:port-number>
 3. Run the python realtime trip information fetcher to compute the daily trip updates.
 ```python
 python ./data/gtfs_tu_3Nov23.py
