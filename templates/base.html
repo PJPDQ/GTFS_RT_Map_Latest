@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+    <!-- LEAFLET -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+      crossorigin=""/>
+    <link type="text/css" rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
+    <link rel="stylesheet" href="../static/css/stylesheets.css"/>
+    <title>PTDTv6 GTFS-RealTime LiveMap (SEQ)</title>
+</head>
+
+<body class="application" style="height:100%">
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="./">South-East Queensland (SEQ) Public Transport Real-time Visualizer (Forward)</a>
+        </div>
+        
+        <ul class="nav navbar-nav navbar-right">
+          <li class="navbar-brand" style="font-size: 0.75vw;">Current Date and Time is <span id='date-time'></span>.</li>
+        </ul>
+      </div>
+  </div>
+	{% block content %}
+	{% endblock content %}
+
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+      integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+      crossorigin=""></script>
+    <!-- END LEAFLET -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="../static/js/assetsFetcher.js"></script>
+  <script src="../static/js/direction.js"></script>
+  <script src="../static/js/leafletmap.js"></script>
+  <script>
+      window.addEventListener('load', function(e) {
+          response = {{res_data | tojson}};
+          render_trajectory(response);
+      }, false);
+  </script>
+</body>
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="color: black;background-color: rgba(0, 0, 0, 0.05); margin-top:2%; font-size:18px;">
+    Queensland University of Technology Copyright © 2023 CEE - All rights reserved || Developed By:
+    <a class="text-dark" href="https://github.com/PJPDQ">Dicky Sentosa Gozali</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!--End of Footer -->
+</html>
