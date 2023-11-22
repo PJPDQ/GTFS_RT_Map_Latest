@@ -23,18 +23,18 @@ pip install -r requirements.txt
 
 ### Processes
 1. Run the python vehicles information fetcher to compute the daily appropriate static files. 
-    a. Execute/ run the [VP_Fetcher](./data/gtfs_tu_3Nov23.py)
-        i. [HFS Route Stop Details](./Static_Preprocessing/HFS/<Month,year>/HFS_Route_Shape_stop_{date-month-year}.csv)
-        ii. [Shapes4 Combine](./Static_Preprocessing/shapes4/<Month,year>/shapes4_combine_{date-month-year}.csv)
-    b. Restart Kernel and Run all codes again to fetch the realtime data.
-    ```python
-    python ./data/gtfs_vp_3Nov23.py
-    ```
+    1. Execute/ run the [VP_Fetcher](./data/gtfs_tu_3Nov23.py)
+        1. [HFS Route Stop Details](./Static_Preprocessing/HFS/<Month,year>/HFS_Route_Shape_stop_{date-month-year}.csv)
+        2. [Shapes4 Combine](./Static_Preprocessing/shapes4/<Month,year>/shapes4_combine_{date-month-year}.csv)
+    2. Restart Kernel and Run all codes again to fetch the realtime data.
+        ```python
+        python ./data/gtfs_vp_3Nov23.py
+        ```
 2. Run the Flask Server (iff the static files are generated properly)
-    a. Open any Web Browser or Click on the address link shown in the Flask Server <ip-address:port-number>
-```python
-python app.py
-```
+    1. Open any Web Browser or Click on the address link shown in the Flask Server <ip-address:port-number>
+        1. ```python
+            python app.py
+            ```
 3. Run the python realtime trip information fetcher to compute the daily trip updates.
 ```python
 python ./data/gtfs_tu_3Nov23.py
