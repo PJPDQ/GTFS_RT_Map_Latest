@@ -53,7 +53,7 @@ python ./data/gtfs_tu_3Nov23.py
 ### RL-PTDT with HFS Live Smoothening.
 
 <p align="center">
-<img src="https://github.com/PJPDQ/GTFS_RT_Map_Latest/assets/25546033/491ec7ae-2643-47de-873c-77b5b823b201" width="88%" height="400">
+<div style="max-width: 1280px"><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"><iframe src="https://connectqutedu-my.sharepoint.com/personal/gozalid_qut_edu_au/_layouts/15/embed.aspx?UniqueId=9a72f63c-a7fc-4696-9300-6b184757e95a&nav=%7B%22playbackOptions%22%3A%7B%22startTimeInSeconds%22%3A0%7D%7D&embed=%7B%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="1280" height="720" frameborder="0" scrolling="no" allowfullscreen title="LiveMap_v6.mp4" style="border:none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 100%; max-width: 100%;"></iframe></div></div>
 </p>
 
 ### Future Directions
