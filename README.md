@@ -5,6 +5,9 @@ A real-time public transport monitoring from web crawling of publicly available 
 Author and Creator: Dicky Sentosa Gozali
 ---
 
+### RL-PTDT with HFS Live Smoothening.
+[<img src="https://github.com/PJPDQ/GTFS_RT_Map_Latest/assets/25546033/0e016ac4-ed66-489a-ba24-bfda65a18178" width="100%" height="100%"/>](https://youtu.be/EKNsGJxNFso)
+
 ### Input Data
 1. [GTFS Static](https://gtfsrt.api.translink.com.au/GTFS/SEQ_GTFS.zip)
 2. [GTFS-Realtime Vehicle Position](https://gtfsrt.api.translink.com.au/api/realtime/SEQ/VehiclePositions)
@@ -44,14 +47,13 @@ python ./data/gtfs_tu_3Nov23.py
 ```
 
 ### Expected Output
+
 1. Daily [HFS Route Stop file](./Static_Preprocessing/HFS/<Month,year>/HFS_Route_Shape_stop_{date-month-year}.csv)
     - This file is a static file of planned scheduled generated everyday providing details of trips, stops, vehicle paths of the day.
 2. Daily [shapes4 File](./Static_Preprocessing/shapes4/<Month,year>/shapes4_combine_{date-month-year}.csv)
     - This file is a static file of planned path/ trajectory of available scheduled generated everyday providing details of the path each scheduled trip would have taken within the day
 3. Web Browser [ip-address:port-number](ip-address:port-number)
     - A visualizer to display the position of public transport vehicles throughout the day.
-### RL-PTDT with HFS Live Smoothening.
-[<img src="https://github.com/PJPDQ/GTFS_RT_Map_Latest/assets/25546033/0e016ac4-ed66-489a-ba24-bfda65a18178" width="100%" height="100%"/>](https://youtu.be/EKNsGJxNFso)
 
 ### Future Directions
 
