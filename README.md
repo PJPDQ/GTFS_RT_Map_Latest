@@ -51,7 +51,7 @@ python ./data/gtfs_tu_3Nov23.py
 3. Web Browser [ip-address:port-number](ip-address:port-number)
     - A visualizer to display the position of public transport vehicles throughout the day.
 ### RL-PTDT with HFS Live Smoothening.
-[<img src="https://img.youtube.com/vi/EKNsGJxNFso/hqdefault.jpg" width="600" height="300"/>](https://youtu.be/EKNsGJxNFso)
+[<img src="https://img.youtube.com/vi/EKNsGJxNFso/hqdefault.jpg" width="100%" height="100%"/>](https://youtu.be/EKNsGJxNFso)
 
 ### Future Directions
 
