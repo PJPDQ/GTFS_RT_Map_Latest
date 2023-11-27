@@ -53,7 +53,7 @@ python ./data/gtfs_tu_3Nov23.py
 ### RL-PTDT with HFS Live Smoothening.
 
 <p align="center">
-<img src="https://github.com/PJPDQ/GTFS_RT_Map_Latest/assets/25546033/e517eafc-2259-4687-8220-0ed6e7facf4f" width="90%" height="400">
+<img src="https://github.com/PJPDQ/GTFS_RT_Map_Latest/assets/25546033/e517eafc-2259-4687-8220-0ed6e7facf4f" width="100%" height="100%">
 </p>
 
 ### Future Directions
