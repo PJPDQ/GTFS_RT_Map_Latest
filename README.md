@@ -2,7 +2,7 @@
 
 A real-time public transport monitoring from web crawling of publicly available and universally accepted dataset, General Transit Feed Specification (GTFS), allowing one to monitor the movement of the public transport across various modes (e.g., Bus, Trains, Ferry). The project is a WebApp that is run under Flask Server. <br>
 
-Author: Dicky Sentosa Gozali
+Author and Creator: Dicky Sentosa Gozali
 ---
 
 ### Input Data
