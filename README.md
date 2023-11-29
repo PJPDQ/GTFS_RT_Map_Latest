@@ -15,7 +15,7 @@ Author and Creator: Dicky Sentosa Gozali
 4. [High Frequency Bus Shapefile](./data/FINAL_STATIC_GDF_26-8-2021/FINAL_STATIC_GDF_26-8-2021.shp)
 
 #### There are three main components of this LiveMap:
-- Data Renderer: this is to fetch data from web source, produce the static preprocessed data for PT trip details and run the data streamer. 
+- Data Renderer: to fetch data from source, produce the static preprocessed data for PT trip details and run the data streamer. 
 - Data Server: the 'backbone' of the system that accepts the processed and rendered data to run the static information into the visualizer.
 - Data Visualizer: the UI of the webApp allowing the real-time display of the public transport at different timestamp.
 
