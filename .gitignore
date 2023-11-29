@@ -13,8 +13,12 @@ static/assets/boat.png
 static/assets/school-bus.png
 static/assets/train.png
 static/js/test
+static/js/assetFetch.js
+static/js/L.ArrowCircle.js
+static/js/map.js
 templates/index.html
 sample.md
 vp-fetcher.xml
 urlfetcher.bat
 GTFS.ipynb
+thumbnail.png

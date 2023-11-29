@@ -98,8 +98,9 @@ if not os.path.exists(Realtime_folder):
     
 gtfs_static_link = r"https://gtfsrt.api.translink.com.au/GTFS/SEQ_GTFS.zip"
 gtfs_realtime_link = r'https://gtfsrt.api.translink.com.au/api/realtime/SEQ/VehiclePositions'
-# HFS_DIR = r"Y:\\Sentosa\\FINAL_STATIC_GDF_26-8-2021\\"
-HFS_DIR = f"{local_path}\\FINAL_STATIC_GDF_26-8-2021\\"
+HFS_DIR = r"Y:\\Sentosa\\FINAL_STATIC_GDF_26-8-2021\\"
+if not os.path.exists(HFS_DIR):
+    HFS_DIR = f".\\FINAL_STATIC_GDF_26-8-2021\\"
 gdf = gpd.read_file(HFS_DIR + "FINAL_STATIC_GDF_26-8-2021.shp")
 EXCHANGE_NAME = 'logs'
 
