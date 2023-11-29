@@ -3,14 +3,15 @@ from json import JSONDecodeError
 from typing import Generator, Tuple
 import pandas as pd
 import pika
+import os
 
 class MessageBroker:
-    EXCHANGE_NAME = "logs"
+    EXCHANGE_NAME = os.environ.get("EXCHANGE_NAME")
 
     def __init__(self):
-        self.conn_params = pika.ConnectionParameters(host="localhost")
+        self.conn_params = pika.ConnectionParameters(host=os.environ.get("HOST"))
         self.channel = pika.BlockingConnection(self.conn_params).channel()
-        self.channel.exchange_declare(exchange=self.EXCHANGE_NAME, exchange_type="fanout")
+        self.channel.exchange_declare(exchange=self.EXCHANGE_NAME, exchange_type=os.environ.get("EXCHANGE_TYPE"))
         self.callback = None
 
     def subscribe(self) -> Generator[Tuple[int, str], None, None]:

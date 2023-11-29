@@ -91,12 +91,12 @@ if not os.path.exists(Static_Folder):
 if not os.path.exists(Realtime_folder):
     os.makedirs(Realtime_folder)
 
-gtfs_static_link = r"https://gtfsrt.api.translink.com.au/GTFS/SEQ_GTFS.zip"
-gtfs_realtime_link = r'https://gtfsrt.api.translink.com.au/api/realtime/SEQ/TripUpdates'
-EXCHANGE_NAME = 'logs'
-EXCHANGE_TYPE = 'fanout'
+gtfs_static_link = os.environ.get("GTFS")
+gtfs_realtime_link = os.environ.get("GTFS_RL_TU")
+EXCHANGE_NAME = os.environ.get("EXCHANGE_NAME")
+EXCHANGE_TYPE = os.environ.get("EXCHANGE_TYPE")
 def producer_init():
-    connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
+    connection = pika.BlockingConnection(pika.ConnectionParameters(host=os.environ.get("HOST")))
     channel = connection.channel()
     channel.exchange_declare(exchange=EXCHANGE_NAME, exchange_type=EXCHANGE_TYPE)
     return channel, connection

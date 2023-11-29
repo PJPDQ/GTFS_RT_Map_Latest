@@ -65,8 +65,8 @@ if not os.path.exists(Static_Folder):
     os.makedirs(Static_Folder)
 if not os.path.exists(Realtime_folder):
     os.makedirs(Realtime_folder)
-gtfs_realtime_link = r'https://gtfsrt.api.translink.com.au/api/realtime/SEQ/VehiclePositions'
-gtfs_static_link = r"https://gtfsrt.api.translink.com.au/GTFS/SEQ_GTFS.zip"  
+gtfs_realtime_link = os.environ.get("GTFS_RL_VP")
+gtfs_static_link = os.environ.get("GTFS")  
 
 # SELECTED_DATE = datetime(2021, 8, 26)
 # duration_length = 7

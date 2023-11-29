@@ -96,8 +96,8 @@ if not os.path.exists(Static_Folder):
 if not os.path.exists(Realtime_folder):
     os.makedirs(Realtime_folder)
     
-gtfs_static_link = r"https://gtfsrt.api.translink.com.au/GTFS/SEQ_GTFS.zip"
-gtfs_realtime_link = r'https://gtfsrt.api.translink.com.au/api/realtime/SEQ/VehiclePositions'
+gtfs_static_link = os.environ.get("GTFS")
+gtfs_realtime_link = os.environ.get("GTFS_RL_VP")
 HFS_DIR = r"Y:\\Sentosa\\FINAL_STATIC_GDF_26-8-2021\\"
 if not os.path.exists(HFS_DIR):
     HFS_DIR = f".\\FINAL_STATIC_GDF_26-8-2021\\"
@@ -106,10 +106,10 @@ EXCHANGE_NAME = 'logs'
 
 def producer_init():
     connection = pika.BlockingConnection(
-        pika.ConnectionParameters(host='localhost'))
+        pika.ConnectionParameters(host=os.environ.get("HOST")))
     channel = connection.channel()
 
-    channel.exchange_declare(exchange=EXCHANGE_NAME, exchange_type='fanout')
+    channel.exchange_declare(exchange=EXCHANGE_NAME, exchange_type=os.environ.get("EXCHANGE_TYPE"))
     return channel, connection
 def producer_start(channel, conn, df):
     def data_prep():
