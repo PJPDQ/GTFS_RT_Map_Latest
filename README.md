@@ -20,12 +20,14 @@ Author and Creator: Dicky Sentosa Gozali
 - Data Visualizer: the UI of the webApp allowing the real-time display of the public transport at different timestamp.
 
 ### Notes
-1. Use the package manage [pip](https://pip.pypa.io/en/stable/) to install necessary packages/
+1. Download [RabbitMQ](https://www.rabbitmq.com/) with admin access on your local computer.
+    1. Follow the [RabbitMQ Installation Setup Documentation](https://www.rabbitmq.com/download.html) available.
+2. Use the package manage [pip](https://pip.pypa.io/en/stable/) to install necessary packages/
 ```bash
 pip install -r requirements.txt
 ```
-2. Your device is connected to the hetrogenmodel drive to download the appropriate static files.
-    a. alternatively, ensure that you have fetched all the necessary static files locally.
+3. Your device is connected to the hetrogenmodel drive to download the appropriate static files.
+    1. Alternatively, ensure that you have fetched all the necessary static files locally.
 
 ### Processes
 1. Run the python vehicles information fetcher to compute the daily appropriate static files. 
