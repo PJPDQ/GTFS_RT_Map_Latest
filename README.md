@@ -5,7 +5,7 @@ A real-time public transport monitoring from web crawling of publicly available 
 Author and Creator: Dicky Sentosa Gozali
 ---
 
-### RL-PTDT with HFS Live Smoothening.
+### RL-PTDT using High Frequency Services Live Smoothening.
 [<img src="https://github.com/PJPDQ/GTFS_RT_Map_Latest/assets/25546033/0e016ac4-ed66-489a-ba24-bfda65a18178" width="100%" height="100%"/>](https://youtu.be/EKNsGJxNFso)
 
 ### Input Data
